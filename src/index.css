@@ -49,3 +49,9 @@ ul {
 .game-info {
   margin-left: 20px;
 }
+
+.hateReact {
+  height: 400px;
+  width: 100%;
+  background-color: cornflowerblue;
+}

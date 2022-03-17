@@ -11,6 +11,7 @@ function Square(props) {
 }
 
 class Board extends React.Component {
+  myRef = React.createRef();
   renderSquare(i) {
     return (
       <Square
@@ -19,10 +20,14 @@ class Board extends React.Component {
       />
     );
   }
+  componentDidMount() {
+    console.log(this.myRef.current.clientWidth);
+    console.log(this.myRef.current.clientHeight);
+  }
 
   render() {
     return (
-      <div>
+      <div ref={this.myRef}>
         <div className="board-row">
           {this.renderSquare(0)}
           {this.renderSquare(1)}
